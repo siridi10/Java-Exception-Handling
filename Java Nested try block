@@ -1,0 +1,22 @@
+Java Nested try block
+The try block within a try block is known as nested try block in java.
+
+Syntax:
+-------
+try  
+{  
+    statement 1;  
+    statement 2;  
+    try  
+    {  
+        statement 1;  
+        statement 2;  
+    }  
+    catch(Exception e)  
+    {  
+    }  
+}  
+catch(Exception e)  
+{  
+}  
+
