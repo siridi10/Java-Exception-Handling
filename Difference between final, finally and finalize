@@ -1,0 +1,40 @@
+Difference between final, finally and finalize
+---------------------------------------------
+                                    Final                                           
+1.Final is used to apply restrictions on class,method & variable.	
+It can't be inherited,overridden and variable value can't be changed.
+2.Final is a keyword.
+3.Java final example
+class FinalExample{  
+public static void main(String[] args){  
+final int x=100;  
+x=200;//Compile Time Error  
+}}
+
+
+                                    Finally
+1.Finally is used to place important code & executed whether exception is handled or not.
+2.Finally is a block.
+3.Java finally example
+class FinallyExample{  
+public static void main(String[] args){  
+try{  
+int x=300;  
+}catch(Exception e){System.out.println(e);}  
+finally{System.out.println("finally block is executed");}  
+}}
+
+
+                                    finalize                                 
+1.Finalize is used to perform clean up processing just before object is garbage collected.                               
+2.Finalize is a method.
+3.Java finalize example
+class FinalizeExample{  
+public void finalize(){System.out.println("finalize called");}  
+public static void main(String[] args){  
+FinalizeExample f1=new FinalizeExample();  
+FinalizeExample f2=new FinalizeExample();  
+f1=null;  
+f2=null;  
+System.gc();  
+}}
